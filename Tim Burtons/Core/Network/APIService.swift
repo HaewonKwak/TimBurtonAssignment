@@ -11,9 +11,9 @@ class APIService {
     
     typealias HTTPHeader = [String: String]
     
-    let serialization: Serializable.Type
+    let serialization: Serializable
     
-    init(serialization: Serializable.Type = JSONSerialization.self) {
+    init(serialization: Serializable = JSONSerializer()) {
         self.serialization = serialization
     }
     
@@ -23,7 +23,7 @@ class APIService {
         let body = try HTTPBodyService(apiRequest: request).makeHTTPBody(encoder: serialization)
         
         var urlRequest = URLRequest(url: url, timeoutInterval: request.timeoutInterval)
-        urlRequest.httpMethod = request.method.rawValue
+        urlRequest.httpMethod = request.method.string
         urlRequest.httpBody = body
         urlRequest.allHTTPHeaderFields = makeHTTPHeaders(withAdditionalHeaders: request.additionalHeaders)
         

@@ -37,10 +37,15 @@
 		BDA73D91204757440089C78D /* APIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D90204757440089C78D /* APIRequestTests.swift */; };
 		BDA73D972047807C0089C78D /* UIViewController+UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D962047807C0089C78D /* UIViewController+UIAlert.swift */; };
 		BDA73D982047807C0089C78D /* UIViewController+UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D962047807C0089C78D /* UIViewController+UIAlert.swift */; };
-		BDA73D9A204788D80089C78D /* URLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D99204788D80089C78D /* URLService.swift */; };
-		BDA73D9B204788D80089C78D /* URLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D99204788D80089C78D /* URLService.swift */; };
+		BDA73D9A204788D80089C78D /* URLConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D99204788D80089C78D /* URLConvertor.swift */; };
+		BDA73D9B204788D80089C78D /* URLConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D99204788D80089C78D /* URLConvertor.swift */; };
 		BDA73D9D20478A250089C78D /* HTTPBodyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D9C20478A250089C78D /* HTTPBodyService.swift */; };
 		BDA73D9E20478A250089C78D /* HTTPBodyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D9C20478A250089C78D /* HTTPBodyService.swift */; };
+		BDA73DA02047924B0089C78D /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D9F2047924B0089C78D /* Serializable.swift */; };
+		BDA73DA12047924B0089C78D /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D9F2047924B0089C78D /* Serializable.swift */; };
+		BDA73DA5204793CD0089C78D /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DA4204793CD0089C78D /* HTTPMethodTests.swift */; };
+		BDA73DA7204795B70089C78D /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DA6204795B70089C78D /* JSONSerializer.swift */; };
+		BDA73DA8204795B70089C78D /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DA6204795B70089C78D /* JSONSerializer.swift */; };
 		BDF827012045E494001DDBAC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF827002045E494001DDBAC /* APIService.swift */; };
 		BDF827032045F94D001DDBAC /* NetworkResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF827022045F94D001DDBAC /* NetworkResponseValidator.swift */; };
 		BDF8270520464CB8001DDBAC /* NumberFormatter+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */; };
@@ -140,8 +145,11 @@
 		BDA73D8E2047558C0089C78D /* ParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingTests.swift; sourceTree = "<group>"; };
 		BDA73D90204757440089C78D /* APIRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestTests.swift; sourceTree = "<group>"; };
 		BDA73D962047807C0089C78D /* UIViewController+UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlert.swift"; sourceTree = "<group>"; };
-		BDA73D99204788D80089C78D /* URLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLService.swift; sourceTree = "<group>"; };
+		BDA73D99204788D80089C78D /* URLConvertor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConvertor.swift; sourceTree = "<group>"; };
 		BDA73D9C20478A250089C78D /* HTTPBodyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBodyService.swift; sourceTree = "<group>"; };
+		BDA73D9F2047924B0089C78D /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		BDA73DA4204793CD0089C78D /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
+		BDA73DA6204795B70089C78D /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
 		BDF827002045E494001DDBAC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		BDF827022045F94D001DDBAC /* NetworkResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseValidator.swift; sourceTree = "<group>"; };
 		BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Util.swift"; sourceTree = "<group>"; };
@@ -347,9 +355,10 @@
 			children = (
 				BDA73D8C204754AE0089C78D /* Protocol */,
 				BDA282EB20452BBE00546918 /* Request */,
-				BDF827002045E494001DDBAC /* APIService.swift */,
-				BDA73D99204788D80089C78D /* URLService.swift */,
+				BDA73D99204788D80089C78D /* URLConvertor.swift */,
+				BDA73DA6204795B70089C78D /* JSONSerializer.swift */,
 				BDA73D9C20478A250089C78D /* HTTPBodyService.swift */,
+				BDF827002045E494001DDBAC /* APIService.swift */,
 				BDF8271820467041001DDBAC /* MockAPIService.swift */,
 				BDF827022045F94D001DDBAC /* NetworkResponseValidator.swift */,
 				BDF8271A20467243001DDBAC /* Parser.swift */,
@@ -381,6 +390,7 @@
 				BDF8271C20467ED0001DDBAC /* Parsing.swift */,
 				BDA282EC20452BCC00546918 /* APIRequest.swift */,
 				BD16B6992044B14600DDFBE7 /* APIExecutable.swift */,
+				BDA73D9F2047924B0089C78D /* Serializable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -390,6 +400,7 @@
 			children = (
 				BDA73D8E2047558C0089C78D /* ParsingTests.swift */,
 				BDA73D90204757440089C78D /* APIRequestTests.swift */,
+				BDA73DA4204793CD0089C78D /* HTTPMethodTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -643,6 +654,8 @@
 				BD16B6AD2045209200DDFBE7 /* ProductListTableViewCell.swift in Sources */,
 				BDF8270B20465FC5001DDBAC /* UITableView+Util.swift in Sources */,
 				BDA282F22045316C00546918 /* Product.swift in Sources */,
+				BDA73DA02047924B0089C78D /* Serializable.swift in Sources */,
+				BDA73DA7204795B70089C78D /* JSONSerializer.swift in Sources */,
 				BDA282EF20452C2000546918 /* HTTPMethod.swift in Sources */,
 				BD6DECBA20450107000543F5 /* Environment.swift in Sources */,
 				BD16B6BA2045B7A400DDFBE7 /* HomeViewController.swift in Sources */,
@@ -651,7 +664,7 @@
 				BDF8270920465F83001DDBAC /* ReusableView.swift in Sources */,
 				BD16B69C2044B1AA00DDFBE7 /* Result.swift in Sources */,
 				BD16B6A920451EA100DDFBE7 /* ProductListViewController.swift in Sources */,
-				BDA73D9A204788D80089C78D /* URLService.swift in Sources */,
+				BDA73D9A204788D80089C78D /* URLConvertor.swift in Sources */,
 				BDA73D9D20478A250089C78D /* HTTPBodyService.swift in Sources */,
 				BDA282ED20452BCC00546918 /* APIRequest.swift in Sources */,
 				BDF8271920467041001DDBAC /* MockAPIService.swift in Sources */,
@@ -682,6 +695,7 @@
 				BDF8275F20474F06001DDBAC /* ReusableViewTests.swift in Sources */,
 				BDA73D91204757440089C78D /* APIRequestTests.swift in Sources */,
 				BDA73D8F2047558C0089C78D /* ParsingTests.swift in Sources */,
+				BDA73DA5204793CD0089C78D /* HTTPMethodTests.swift in Sources */,
 				BD6DECBE20450950000543F5 /* EnvironmentTests.swift in Sources */,
 				BDF82751204690E6001DDBAC /* ProductTests.swift in Sources */,
 				BDF82762204751DE001DDBAC /* SplashViewTests.swift in Sources */,
@@ -696,6 +710,7 @@
 				BDF8272120468E7C001DDBAC /* Constants.swift in Sources */,
 				BDF8272220468E7C001DDBAC /* SplashView.swift in Sources */,
 				BDF8272320468E7C001DDBAC /* ProductListTableViewCell.swift in Sources */,
+				BDA73DA12047924B0089C78D /* Serializable.swift in Sources */,
 				BDF8272420468E7C001DDBAC /* UITableView+Util.swift in Sources */,
 				BDF8272520468E7C001DDBAC /* Product.swift in Sources */,
 				BDF8272620468E7C001DDBAC /* HTTPMethod.swift in Sources */,
@@ -704,8 +719,9 @@
 				BDF8272920468E7C001DDBAC /* APIService.swift in Sources */,
 				BDF8272A20468E7C001DDBAC /* EnvironmentDataSource.swift in Sources */,
 				BDF8272B20468E7C001DDBAC /* ReusableView.swift in Sources */,
+				BDA73DA8204795B70089C78D /* JSONSerializer.swift in Sources */,
 				BDF8272C20468E7C001DDBAC /* Result.swift in Sources */,
-				BDA73D9B204788D80089C78D /* URLService.swift in Sources */,
+				BDA73D9B204788D80089C78D /* URLConvertor.swift in Sources */,
 				BDF8272D20468E7C001DDBAC /* ProductListViewController.swift in Sources */,
 				BDF8272E20468E7C001DDBAC /* APIRequest.swift in Sources */,
 				BDF8273020468E7C001DDBAC /* Parsing.swift in Sources */,

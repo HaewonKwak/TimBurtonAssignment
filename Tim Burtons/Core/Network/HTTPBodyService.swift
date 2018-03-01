@@ -9,7 +9,7 @@
 struct HTTPBodyService {
     let apiRequest: APIRequest
     
-    func makeHTTPBody(encoder: HTTPBodyEncoding.Type) throws -> Data? {
+    func makeHTTPBody(encoder: HTTPBodyEncoding) throws -> Data? {
         guard !apiRequest.method.isInlineURL,
             let parameter = apiRequest.parameters else {
                 return nil

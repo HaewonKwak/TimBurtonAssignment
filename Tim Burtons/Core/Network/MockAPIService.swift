@@ -8,9 +8,9 @@
 
 struct MockAPIService: APIExecutable {
     let bundle: Bundle
-    let serialization: Serializable.Type
+    let serialization: Serializable
     
-    init(bundle: Bundle = .main, serialization: Serializable.Type = JSONSerialization.self) {
+    init(bundle: Bundle = .main, serialization: Serializable = JSONSerializer()) {
         self.bundle = bundle
         self.serialization = serialization
     }
