@@ -42,7 +42,7 @@ URL: https://api.timburtons.com/
 GET Products
 Route: /v1/products
 Response:
-
+```json
 {
     "products": [{
                  "id": 1,
@@ -79,6 +79,4 @@ Response:
                  }
                  ]
 }
-
-
-
+```
