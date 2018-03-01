@@ -26,6 +26,6 @@ class JSONSerializerTests: XCTestCase {
         let data = "{\"value\": \"test\", \"cost\": 1.0}".data(using: .utf8)!
         XCTAssertNoThrow(try jsonSerializer.decodeObject(with: data))
     }
-    
-    
 }
+
+

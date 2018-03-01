@@ -6,9 +6,9 @@
 //  Copyright © 2018 Tim Burtons. All rights reserved.
 //
 
-struct URLConvertor {
+struct URLConvertor: URLConvertable {
     
-    func makeURL(apiRequest: APIRequest) throws -> URL {
+    func makeURL(_ apiRequest: APIRequest) throws -> URL {
         guard apiRequest.method.isInlineURL else {
             return try makeURL(string: apiRequest.url)
         }

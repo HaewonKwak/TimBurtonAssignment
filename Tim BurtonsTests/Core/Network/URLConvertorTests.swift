@@ -59,26 +59,26 @@ class URLConvertorTests: XCTestCase {
     func testURLConvertorWithAPIRequest() {
         HTTPMethod.allMethods.forEach { method in
             let apiRequest = MockAPIRequest(method: method)
-            XCTAssertNoThrow(try? urlConvertor.makeURL(apiRequest: apiRequest))
+            XCTAssertNoThrow(try? urlConvertor.makeURL(apiRequest))
         }
     }
     
     func testURLConvertorWithInlineURLAndNoParameters() {
         let apiRequest = MockAPIRequest(method: .get)
-        let url = try! urlConvertor.makeURL(apiRequest: apiRequest)
+        let url = try! urlConvertor.makeURL(apiRequest)
         XCTAssertEqual(url.absoluteString, apiRequest.url)
     }
 
     func testURLConvertorWithInlineURLAndParameters() {
         let apiRequest = MockAPIRequest(method: .get, parameters: ["value": "test"])
-        let url = try! urlConvertor.makeURL(apiRequest: apiRequest)
+        let url = try! urlConvertor.makeURL(apiRequest)
         XCTAssertEqual(url.absoluteString, "https://api.timburtons.com/v1/products?value=test")
     }
     
     func testURLConvertorWithURLAndNoParameters() {
         HTTPMethod.nonInlineMethods.forEach { method in
             let apiRequest = MockAPIRequest(method: .post)
-            let url = try! urlConvertor.makeURL(apiRequest: apiRequest)
+            let url = try! urlConvertor.makeURL(apiRequest)
             XCTAssertEqual(url.absoluteString, apiRequest.url)
         }
     }
@@ -86,7 +86,7 @@ class URLConvertorTests: XCTestCase {
     func testURLConvertorWithURLAndParameters() {
         HTTPMethod.nonInlineMethods.forEach { method in
             let apiRequest = MockAPIRequest(method: .post, parameters: ["value": "test"])
-            let url = try! urlConvertor.makeURL(apiRequest: apiRequest)
+            let url = try! urlConvertor.makeURL(apiRequest)
             XCTAssertEqual(url.absoluteString, apiRequest.url)
         }
     }    

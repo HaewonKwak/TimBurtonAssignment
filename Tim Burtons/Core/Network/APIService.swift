@@ -9,33 +9,12 @@
 class APIService {
     static let shared = APIService()
     
-    typealias HTTPHeader = [String: String]
-    
-    let serialization: Serializable
+    let urlRequestConvertor: URLRequestConvertable
     let session: SessionRequestable
-    init(serialization: Serializable = JSONSerializer(), session: SessionRequestable = URLSession.shared) {
-        self.serialization = serialization
+    
+    init(urlRequestConvertor: URLRequestConvertable = URLRequestConvertor(), session: SessionRequestable = URLSession.shared) {
+        self.urlRequestConvertor = urlRequestConvertor
         self.session = session
-    }
-    
-    func makeURLRequest(_ request: APIRequest) throws -> URLRequest {
-        
-        let url = try URLConvertor().makeURL(apiRequest: request)
-        let body = try HTTPBodyService(apiRequest: request).makeHTTPBody(encoder: serialization)
-        
-        var urlRequest = URLRequest(url: url, timeoutInterval: request.timeoutInterval)
-        urlRequest.httpMethod = request.method.string
-        urlRequest.httpBody = body
-        urlRequest.allHTTPHeaderFields = makeHTTPHeaders(withAdditionalHeaders: request.additionalHeaders)
-        
-        return urlRequest
-    }
-    
-    func makeHTTPHeaders(withAdditionalHeaders additionalHeaders: HTTPHeader?) -> HTTPHeader {
-        guard let additionalHeaders = additionalHeaders else {
-            return serialization.httpHeaders
-        }
-        return serialization.httpHeaders.merging(additionalHeaders) { $1 }
     }
 }
 
@@ -45,7 +24,7 @@ extension APIService: APIExecutable {
         let urlRequest: URLRequest
         
         do {
-            urlRequest = try makeURLRequest(request)
+            urlRequest = try urlRequestConvertor.makeURLRequest(request)
         } catch {
             return completion(.failure(error))
         }
@@ -56,11 +35,10 @@ extension APIService: APIExecutable {
                     return completion(.failure(error))
                 }
                 do {
-                    try NetworkResponseValidator(response: response).validate()
                     guard let data = data else {
                         throw NetworkError.missingURL
                     }
-                    let object = try self.serialization.decodeObject(with: data)
+                    let object = try self.urlRequestConvertor.serialization.decodeObject(with: data)
                     completion(.success(object))
                 } catch {
                     completion(.failure(error))

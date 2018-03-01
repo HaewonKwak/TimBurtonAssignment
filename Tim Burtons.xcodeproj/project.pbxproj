@@ -39,8 +39,6 @@
 		BDA73D982047807C0089C78D /* UIViewController+UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D962047807C0089C78D /* UIViewController+UIAlert.swift */; };
 		BDA73D9A204788D80089C78D /* URLConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D99204788D80089C78D /* URLConvertor.swift */; };
 		BDA73D9B204788D80089C78D /* URLConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D99204788D80089C78D /* URLConvertor.swift */; };
-		BDA73D9D20478A250089C78D /* HTTPBodyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D9C20478A250089C78D /* HTTPBodyService.swift */; };
-		BDA73D9E20478A250089C78D /* HTTPBodyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D9C20478A250089C78D /* HTTPBodyService.swift */; };
 		BDA73DA02047924B0089C78D /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D9F2047924B0089C78D /* Serializable.swift */; };
 		BDA73DA12047924B0089C78D /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73D9F2047924B0089C78D /* Serializable.swift */; };
 		BDA73DA5204793CD0089C78D /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DA4204793CD0089C78D /* HTTPMethodTests.swift */; };
@@ -50,10 +48,17 @@
 		BDA73DAC20479A100089C78D /* ReqeustProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DAB20479A100089C78D /* ReqeustProductsTests.swift */; };
 		BDA73DAE20479BC90089C78D /* MockTimBurtonEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DAD20479BC90089C78D /* MockTimBurtonEnvironment.swift */; };
 		BDA73DB02047AB350089C78D /* JSONSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DAF2047AB350089C78D /* JSONSerializerTests.swift */; };
-		BDA73DB22047AE250089C78D /* HTTPBodyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DB12047AE250089C78D /* HTTPBodyServiceTests.swift */; };
 		BDA73DB42047AE550089C78D /* MockAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DB32047AE550089C78D /* MockAPIRequest.swift */; };
+		BDA73DB62047BA450089C78D /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DB52047BA450089C78D /* ParserTests.swift */; };
+		BDA73DB92047BE9E0089C78D /* HTTPBodyEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DB82047BE9E0089C78D /* HTTPBodyEncodingTests.swift */; };
+		BDA73DBB2047C0330089C78D /* HavingHTTPHeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DBA2047C0330089C78D /* HavingHTTPHeadersTests.swift */; };
+		BDA73DBD2047C32E0089C78D /* URLRequestConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DBC2047C32E0089C78D /* URLRequestConvertor.swift */; };
+		BDA73DBE2047C32E0089C78D /* URLRequestConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DBC2047C32E0089C78D /* URLRequestConvertor.swift */; };
+		BDA73DC02047C3C70089C78D /* URLConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DBF2047C3C70089C78D /* URLConvertable.swift */; };
+		BDA73DC12047C3C70089C78D /* URLConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DBF2047C3C70089C78D /* URLConvertable.swift */; };
+		BDA73DC32047C7690089C78D /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DC22047C7690089C78D /* APIServiceTests.swift */; };
+		BDA73DC52047C7920089C78D /* URLRequestConvertorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DC42047C7920089C78D /* URLRequestConvertorTests.swift */; };
 		BDF827012045E494001DDBAC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF827002045E494001DDBAC /* APIService.swift */; };
-		BDF827032045F94D001DDBAC /* NetworkResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF827022045F94D001DDBAC /* NetworkResponseValidator.swift */; };
 		BDF8270520464CB8001DDBAC /* NumberFormatter+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */; };
 		BDF8270920465F83001DDBAC /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270820465F83001DDBAC /* ReusableView.swift */; };
 		BDF8270B20465FC5001DDBAC /* UITableView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270A20465FC5001DDBAC /* UITableView+Util.swift */; };
@@ -65,7 +70,6 @@
 		BDF8271920467041001DDBAC /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8271820467041001DDBAC /* MockAPIService.swift */; };
 		BDF8271B20467243001DDBAC /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8271A20467243001DDBAC /* Parser.swift */; };
 		BDF8271D20467ED0001DDBAC /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8271C20467ED0001DDBAC /* Parsing.swift */; };
-		BDF8272020468E7C001DDBAC /* NetworkResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF827022045F94D001DDBAC /* NetworkResponseValidator.swift */; };
 		BDF8272120468E7C001DDBAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA282E820452AF800546918 /* Constants.swift */; };
 		BDF8272220468E7C001DDBAC /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8271220466482001DDBAC /* SplashView.swift */; };
 		BDF8272320468E7C001DDBAC /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16B6AC2045209200DDFBE7 /* ProductListTableViewCell.swift */; };
@@ -152,7 +156,6 @@
 		BDA73D90204757440089C78D /* APIRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestTests.swift; sourceTree = "<group>"; };
 		BDA73D962047807C0089C78D /* UIViewController+UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlert.swift"; sourceTree = "<group>"; };
 		BDA73D99204788D80089C78D /* URLConvertor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConvertor.swift; sourceTree = "<group>"; };
-		BDA73D9C20478A250089C78D /* HTTPBodyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBodyService.swift; sourceTree = "<group>"; };
 		BDA73D9F2047924B0089C78D /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		BDA73DA4204793CD0089C78D /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
 		BDA73DA6204795B70089C78D /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
@@ -160,10 +163,15 @@
 		BDA73DAB20479A100089C78D /* ReqeustProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqeustProductsTests.swift; sourceTree = "<group>"; };
 		BDA73DAD20479BC90089C78D /* MockTimBurtonEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimBurtonEnvironment.swift; sourceTree = "<group>"; };
 		BDA73DAF2047AB350089C78D /* JSONSerializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializerTests.swift; sourceTree = "<group>"; };
-		BDA73DB12047AE250089C78D /* HTTPBodyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBodyServiceTests.swift; sourceTree = "<group>"; };
 		BDA73DB32047AE550089C78D /* MockAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIRequest.swift; sourceTree = "<group>"; };
+		BDA73DB52047BA450089C78D /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
+		BDA73DB82047BE9E0089C78D /* HTTPBodyEncodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBodyEncodingTests.swift; sourceTree = "<group>"; };
+		BDA73DBA2047C0330089C78D /* HavingHTTPHeadersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HavingHTTPHeadersTests.swift; sourceTree = "<group>"; };
+		BDA73DBC2047C32E0089C78D /* URLRequestConvertor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestConvertor.swift; sourceTree = "<group>"; };
+		BDA73DBF2047C3C70089C78D /* URLConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConvertable.swift; sourceTree = "<group>"; };
+		BDA73DC22047C7690089C78D /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		BDA73DC42047C7920089C78D /* URLRequestConvertorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestConvertorTests.swift; sourceTree = "<group>"; };
 		BDF827002045E494001DDBAC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		BDF827022045F94D001DDBAC /* NetworkResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseValidator.swift; sourceTree = "<group>"; };
 		BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Util.swift"; sourceTree = "<group>"; };
 		BDF8270820465F83001DDBAC /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		BDF8270A20465FC5001DDBAC /* UITableView+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Util.swift"; sourceTree = "<group>"; };
@@ -368,12 +376,10 @@
 				BDA73D8C204754AE0089C78D /* Protocol */,
 				BDA282EB20452BBE00546918 /* Request */,
 				BDA73D99204788D80089C78D /* URLConvertor.swift */,
+				BDA73DBC2047C32E0089C78D /* URLRequestConvertor.swift */,
 				BDA73DA6204795B70089C78D /* JSONSerializer.swift */,
-				BDA73D9C20478A250089C78D /* HTTPBodyService.swift */,
 				BDF827002045E494001DDBAC /* APIService.swift */,
 				BDF8271820467041001DDBAC /* MockAPIService.swift */,
-				BDF827022045F94D001DDBAC /* NetworkResponseValidator.swift */,
-				BDF8271A20467243001DDBAC /* Parser.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -391,6 +397,8 @@
 		BDA282F02045314900546918 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDA73DB72047BA610089C78D /* Protocol */,
+				BDF8271A20467243001DDBAC /* Parser.swift */,
 				BDA282F12045316C00546918 /* Product.swift */,
 			);
 			path = Model;
@@ -399,10 +407,10 @@
 		BDA73D8C204754AE0089C78D /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				BDF8271C20467ED0001DDBAC /* Parsing.swift */,
 				BDA282EC20452BCC00546918 /* APIRequest.swift */,
 				BD16B6992044B14600DDFBE7 /* APIExecutable.swift */,
 				BDA73D9F2047924B0089C78D /* Serializable.swift */,
+				BDA73DBF2047C3C70089C78D /* URLConvertable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -417,10 +425,21 @@
 				BDA73DA4204793CD0089C78D /* HTTPMethodTests.swift */,
 				BDA73DAB20479A100089C78D /* ReqeustProductsTests.swift */,
 				BDA73DA92047987B0089C78D /* URLConvertorTests.swift */,
+				BDA73DB82047BE9E0089C78D /* HTTPBodyEncodingTests.swift */,
+				BDA73DBA2047C0330089C78D /* HavingHTTPHeadersTests.swift */,
 				BDA73DAF2047AB350089C78D /* JSONSerializerTests.swift */,
-				BDA73DB12047AE250089C78D /* HTTPBodyServiceTests.swift */,
+				BDA73DC42047C7920089C78D /* URLRequestConvertorTests.swift */,
+				BDA73DC22047C7690089C78D /* APIServiceTests.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BDA73DB72047BA610089C78D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BDF8271C20467ED0001DDBAC /* Parsing.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		BDF827062046573A001DDBAC /* Views */ = {
@@ -465,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				BDF82750204690E6001DDBAC /* ProductTests.swift */,
+				BDA73DB52047BA450089C78D /* ParserTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -666,8 +686,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF827032045F94D001DDBAC /* NetworkResponseValidator.swift in Sources */,
 				BDA282E920452AF800546918 /* Constants.swift in Sources */,
+				BDA73DBD2047C32E0089C78D /* URLRequestConvertor.swift in Sources */,
 				BDF8271320466482001DDBAC /* SplashView.swift in Sources */,
 				BD16B6AD2045209200DDFBE7 /* ProductListTableViewCell.swift in Sources */,
 				BDF8270B20465FC5001DDBAC /* UITableView+Util.swift in Sources */,
@@ -683,9 +703,9 @@
 				BD16B69C2044B1AA00DDFBE7 /* Result.swift in Sources */,
 				BD16B6A920451EA100DDFBE7 /* ProductListViewController.swift in Sources */,
 				BDA73D9A204788D80089C78D /* URLConvertor.swift in Sources */,
-				BDA73D9D20478A250089C78D /* HTTPBodyService.swift in Sources */,
 				BDA282ED20452BCC00546918 /* APIRequest.swift in Sources */,
 				BDF8271920467041001DDBAC /* MockAPIService.swift in Sources */,
+				BDA73DC02047C3C70089C78D /* URLConvertable.swift in Sources */,
 				BDF8271D20467ED0001DDBAC /* Parsing.swift in Sources */,
 				BDF8271B20467243001DDBAC /* Parser.swift in Sources */,
 				BD16B6B120452CA100DDFBE7 /* UIColor+Util.swift in Sources */,
@@ -707,11 +727,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA73DB92047BE9E0089C78D /* HTTPBodyEncodingTests.swift in Sources */,
 				BDF8275B20474D4A001DDBAC /* NibLoadableViewTests.swift in Sources */,
+				BDA73DC52047C7920089C78D /* URLRequestConvertorTests.swift in Sources */,
 				BDA73DAA2047987B0089C78D /* URLConvertorTests.swift in Sources */,
+				BDA73DC32047C7690089C78D /* APIServiceTests.swift in Sources */,
 				BDF827542046F40A001DDBAC /* Error.swift in Sources */,
 				BD6DECA82044F129000543F5 /* Tim_BurtonsTests.swift in Sources */,
-				BDA73DB22047AE250089C78D /* HTTPBodyServiceTests.swift in Sources */,
 				BDF8275F20474F06001DDBAC /* ReusableViewTests.swift in Sources */,
 				BDA73DAC20479A100089C78D /* ReqeustProductsTests.swift in Sources */,
 				BDA73D91204757440089C78D /* APIRequestTests.swift in Sources */,
@@ -719,9 +741,11 @@
 				BDA73DAE20479BC90089C78D /* MockTimBurtonEnvironment.swift in Sources */,
 				BDA73D8F2047558C0089C78D /* ParsingTests.swift in Sources */,
 				BDA73DA5204793CD0089C78D /* HTTPMethodTests.swift in Sources */,
+				BDA73DBB2047C0330089C78D /* HavingHTTPHeadersTests.swift in Sources */,
 				BDA73DB42047AE550089C78D /* MockAPIRequest.swift in Sources */,
 				BD6DECBE20450950000543F5 /* EnvironmentTests.swift in Sources */,
 				BDF82751204690E6001DDBAC /* ProductTests.swift in Sources */,
+				BDA73DB62047BA450089C78D /* ParserTests.swift in Sources */,
 				BDF82762204751DE001DDBAC /* SplashViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,7 +754,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF8272020468E7C001DDBAC /* NetworkResponseValidator.swift in Sources */,
 				BDF8272120468E7C001DDBAC /* Constants.swift in Sources */,
 				BDF8272220468E7C001DDBAC /* SplashView.swift in Sources */,
 				BDF8272320468E7C001DDBAC /* ProductListTableViewCell.swift in Sources */,
@@ -749,6 +772,7 @@
 				BDF8272D20468E7C001DDBAC /* ProductListViewController.swift in Sources */,
 				BDF8272E20468E7C001DDBAC /* APIRequest.swift in Sources */,
 				BDF8273020468E7C001DDBAC /* Parsing.swift in Sources */,
+				BDA73DBE2047C32E0089C78D /* URLRequestConvertor.swift in Sources */,
 				BDF8273120468E7C001DDBAC /* Parser.swift in Sources */,
 				BDF8273220468E7C001DDBAC /* UIColor+Util.swift in Sources */,
 				BDF8273320468E7C001DDBAC /* NumberFormatter+Util.swift in Sources */,
@@ -758,9 +782,9 @@
 				BDF8273720468E7C001DDBAC /* Request+Products.swift in Sources */,
 				BDF8273820468E7C001DDBAC /* Error.swift in Sources */,
 				BDF8273920468E7C001DDBAC /* NibLoadableView.swift in Sources */,
+				BDA73DC12047C3C70089C78D /* URLConvertable.swift in Sources */,
 				BDF8273A20468E7C001DDBAC /* AppDelegate.swift in Sources */,
 				BDA73D982047807C0089C78D /* UIViewController+UIAlert.swift in Sources */,
-				BDA73D9E20478A250089C78D /* HTTPBodyService.swift in Sources */,
 				BDF8273B20468E7C001DDBAC /* ProductListService.swift in Sources */,
 				BDF8273C20468E7C001DDBAC /* UIView+Util.swift in Sources */,
 			);
