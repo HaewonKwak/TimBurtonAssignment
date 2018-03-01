@@ -12,9 +12,10 @@ class APIService {
     typealias HTTPHeader = [String: String]
     
     let serialization: Serializable
-    
-    init(serialization: Serializable = JSONSerializer()) {
+    let session: SessionRequestable
+    init(serialization: Serializable = JSONSerializer(), session: SessionRequestable = URLSession.shared) {
         self.serialization = serialization
+        self.session = session
     }
     
     func makeURLRequest(_ request: APIRequest) throws -> URLRequest {
@@ -49,7 +50,7 @@ extension APIService: APIExecutable {
             return completion(.failure(error))
         }
         
-        let task = URLSession.shared.dataTask(with: urlRequest) { [unowned self] (data, response, error) in
+        let task = session.dataTask(with: urlRequest) { [unowned self] (data, response, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     return completion(.failure(error))

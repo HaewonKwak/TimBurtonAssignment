@@ -38,7 +38,10 @@ struct URLConvertor {
             }.joined(separator: "&")
             .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
     }
-    
+}
+
+// MARK: - Private
+private extension URLConvertor {
     func convertToQueryString(fromValue value: Any) -> String {
         if let bool = value as? Bool {
             return bool ? "1" : "0"
@@ -46,7 +49,7 @@ struct URLConvertor {
         return "\(value)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
     }
 
-    private func makeURL(string: String) throws -> URL {
+    func makeURL(string: String) throws -> URL {
         guard let url = URL(string: string) else {
             throw NetworkError.missingURL
         }

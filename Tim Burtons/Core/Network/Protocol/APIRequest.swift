@@ -8,7 +8,7 @@
 
 protocol APIRequest {
     var environment: EnvironmentConfigurable { get }
-    var urlPath: String { get }
+    var urlRoute: String { get }
     var method: HTTPMethod { get }
     var parameters: [String: Any]? { get }
     var timeoutInterval: TimeInterval { get }
@@ -30,7 +30,7 @@ extension APIRequest {
     }
     
     var url: String {
-        return "\(environment.baseURL)\(urlPath)"
+        return "\(environment.baseURL)\(urlRoute)"
     }
 }
 

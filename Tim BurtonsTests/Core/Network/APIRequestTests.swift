@@ -9,18 +9,18 @@
 import XCTest
 @testable import Tim_Burtons
 
-struct MockEnvironment: EnvironmentConfigurable {
-    let baseURL = "http://www.rogers.com/"
-}
-
-struct MockAPIRequest: APIRequest {
-    let environment: EnvironmentConfigurable = MockEnvironment()
-    let urlPath = "api/products"
-    let method: HTTPMethod = .get
-}
-
 class APIRequestTests: XCTestCase {
+
+    struct MockEnvironment: EnvironmentConfigurable {
+        let baseURL = "http://www.rogers.com/"
+    }
     
+    struct MockAPIRequest: APIRequest {
+        let environment: EnvironmentConfigurable = MockEnvironment()
+        let urlRoute = "api/products"
+        let method: HTTPMethod = .get
+    }
+
     var apiRequest: APIRequest!
     
     override func setUp() {
@@ -41,7 +41,6 @@ class APIRequestTests: XCTestCase {
     }
     
     func testAPIRequestURL() {
-        let expectedURL = "http://www.rogers.com/api/products"
-        XCTAssertEqual(apiRequest.url, expectedURL)
+        XCTAssertEqual(apiRequest.url, "http://www.rogers.com/api/products")
     }
 }

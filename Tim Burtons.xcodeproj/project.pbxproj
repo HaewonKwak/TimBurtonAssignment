@@ -46,6 +46,12 @@
 		BDA73DA5204793CD0089C78D /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DA4204793CD0089C78D /* HTTPMethodTests.swift */; };
 		BDA73DA7204795B70089C78D /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DA6204795B70089C78D /* JSONSerializer.swift */; };
 		BDA73DA8204795B70089C78D /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DA6204795B70089C78D /* JSONSerializer.swift */; };
+		BDA73DAA2047987B0089C78D /* URLConvertorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DA92047987B0089C78D /* URLConvertorTests.swift */; };
+		BDA73DAC20479A100089C78D /* ReqeustProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DAB20479A100089C78D /* ReqeustProductsTests.swift */; };
+		BDA73DAE20479BC90089C78D /* MockTimBurtonEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DAD20479BC90089C78D /* MockTimBurtonEnvironment.swift */; };
+		BDA73DB02047AB350089C78D /* JSONSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DAF2047AB350089C78D /* JSONSerializerTests.swift */; };
+		BDA73DB22047AE250089C78D /* HTTPBodyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DB12047AE250089C78D /* HTTPBodyServiceTests.swift */; };
+		BDA73DB42047AE550089C78D /* MockAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DB32047AE550089C78D /* MockAPIRequest.swift */; };
 		BDF827012045E494001DDBAC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF827002045E494001DDBAC /* APIService.swift */; };
 		BDF827032045F94D001DDBAC /* NetworkResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF827022045F94D001DDBAC /* NetworkResponseValidator.swift */; };
 		BDF8270520464CB8001DDBAC /* NumberFormatter+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */; };
@@ -150,6 +156,12 @@
 		BDA73D9F2047924B0089C78D /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		BDA73DA4204793CD0089C78D /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
 		BDA73DA6204795B70089C78D /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
+		BDA73DA92047987B0089C78D /* URLConvertorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConvertorTests.swift; sourceTree = "<group>"; };
+		BDA73DAB20479A100089C78D /* ReqeustProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqeustProductsTests.swift; sourceTree = "<group>"; };
+		BDA73DAD20479BC90089C78D /* MockTimBurtonEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimBurtonEnvironment.swift; sourceTree = "<group>"; };
+		BDA73DAF2047AB350089C78D /* JSONSerializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializerTests.swift; sourceTree = "<group>"; };
+		BDA73DB12047AE250089C78D /* HTTPBodyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBodyServiceTests.swift; sourceTree = "<group>"; };
+		BDA73DB32047AE550089C78D /* MockAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIRequest.swift; sourceTree = "<group>"; };
 		BDF827002045E494001DDBAC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		BDF827022045F94D001DDBAC /* NetworkResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseValidator.swift; sourceTree = "<group>"; };
 		BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Util.swift"; sourceTree = "<group>"; };
@@ -398,9 +410,15 @@
 		BDA73D8D204755760089C78D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BDA73DAD20479BC90089C78D /* MockTimBurtonEnvironment.swift */,
+				BDA73DB32047AE550089C78D /* MockAPIRequest.swift */,
 				BDA73D8E2047558C0089C78D /* ParsingTests.swift */,
 				BDA73D90204757440089C78D /* APIRequestTests.swift */,
 				BDA73DA4204793CD0089C78D /* HTTPMethodTests.swift */,
+				BDA73DAB20479A100089C78D /* ReqeustProductsTests.swift */,
+				BDA73DA92047987B0089C78D /* URLConvertorTests.swift */,
+				BDA73DAF2047AB350089C78D /* JSONSerializerTests.swift */,
+				BDA73DB12047AE250089C78D /* HTTPBodyServiceTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -690,12 +708,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF8275B20474D4A001DDBAC /* NibLoadableViewTests.swift in Sources */,
+				BDA73DAA2047987B0089C78D /* URLConvertorTests.swift in Sources */,
 				BDF827542046F40A001DDBAC /* Error.swift in Sources */,
 				BD6DECA82044F129000543F5 /* Tim_BurtonsTests.swift in Sources */,
+				BDA73DB22047AE250089C78D /* HTTPBodyServiceTests.swift in Sources */,
 				BDF8275F20474F06001DDBAC /* ReusableViewTests.swift in Sources */,
+				BDA73DAC20479A100089C78D /* ReqeustProductsTests.swift in Sources */,
 				BDA73D91204757440089C78D /* APIRequestTests.swift in Sources */,
+				BDA73DB02047AB350089C78D /* JSONSerializerTests.swift in Sources */,
+				BDA73DAE20479BC90089C78D /* MockTimBurtonEnvironment.swift in Sources */,
 				BDA73D8F2047558C0089C78D /* ParsingTests.swift in Sources */,
 				BDA73DA5204793CD0089C78D /* HTTPMethodTests.swift in Sources */,
+				BDA73DB42047AE550089C78D /* MockAPIRequest.swift in Sources */,
 				BD6DECBE20450950000543F5 /* EnvironmentTests.swift in Sources */,
 				BDF82751204690E6001DDBAC /* ProductTests.swift in Sources */,
 				BDF82762204751DE001DDBAC /* SplashViewTests.swift in Sources */,

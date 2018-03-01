@@ -9,18 +9,27 @@
 import XCTest
 @testable import Tim_Burtons
 
+extension HTTPMethod {
+    static var allMethods: [HTTPMethod] {
+        return [.get, .post, .put, .delete, .patch]
+    }
+    
+    static var nonInlineMethods: [HTTPMethod] {
+        return allMethods.filter { !$0.isInlineURL }
+    }
+}
+
 class HTTPMethodTests: XCTestCase {
-    let methods: [HTTPMethod] = [.get, .post, .put, .delete, .patch]
 
     func testHTTPMethodStrings() {
         let methodStrings = ["GET", "POST", "PUT", "DELETE", "PATCH"]
-        zip(methods, methodStrings).forEach { method, string in
+        zip(HTTPMethod.allMethods, methodStrings).forEach { method, string in
             XCTAssertEqual(method.string, string)
         }
     }
     
     func testHTTPMethodInlineURL() {
-        methods.forEach { method in
+        HTTPMethod.allMethods.forEach { method in
             if method == .get {
                 XCTAssertTrue(method.isInlineURL)
             } else {

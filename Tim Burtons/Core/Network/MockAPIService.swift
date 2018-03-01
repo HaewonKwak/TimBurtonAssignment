@@ -16,7 +16,7 @@ struct MockAPIService: APIExecutable {
     }
     
     func execute(_ request: APIRequest, completion: @escaping (Result) -> ()) {
-        guard let path = bundle.path(forResource: request.urlPath.replacingOccurrences(of: "/", with: ":"), ofType: "json") else {
+        guard let path = bundle.path(forResource: request.urlRoute.replacingOccurrences(of: "/", with: ":"), ofType: "json") else {
             return completion(.failure(NetworkError.missingURL))
         }
         

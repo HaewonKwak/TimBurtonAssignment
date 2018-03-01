@@ -30,3 +30,8 @@ extension HTTPMethod {
     }
 }
 
+extension HTTPMethod: Equatable {
+    static func ==(lhs: HTTPMethod, rhs: HTTPMethod) -> Bool {
+        return lhs.string == rhs.string
+    }
+}

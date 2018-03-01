@@ -9,14 +9,12 @@
 import XCTest
 @testable import Tim_Burtons
 
-struct MockParsing: Parsing {
-    
-    init(parser: Parser) throws {
-    }
-}
-
 class ParsingTests: XCTestCase {
-    
+
+    struct MockParsing: Parsing {
+        init(parser: Parser) throws { }
+    }
+
     private func makeParsers(count: Int) -> [Parser] {
         var parsers: [Parser] = []
         for _ in 0..<count {

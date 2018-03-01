@@ -10,3 +10,8 @@ protocol APIExecutable {
     func execute(_ request: APIRequest, completion: @escaping (Result) -> ())
 }
 
+protocol SessionRequestable {
+    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) -> URLSessionDataTask
+}
+
+extension URLSession: SessionRequestable { }
