@@ -29,7 +29,6 @@
 		BD6DECBA20450107000543F5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DECB920450107000543F5 /* Environment.swift */; };
 		BD6DECBE20450950000543F5 /* EnvironmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DECBD20450950000543F5 /* EnvironmentTests.swift */; };
 		BD6DECC020450ADE000543F5 /* EnvironmentDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DECBF20450ADE000543F5 /* EnvironmentDataSource.swift */; };
-		BDA282E920452AF800546918 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA282E820452AF800546918 /* Constants.swift */; };
 		BDA282ED20452BCC00546918 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA282EC20452BCC00546918 /* APIRequest.swift */; };
 		BDA282EF20452C2000546918 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA282EE20452C2000546918 /* HTTPMethod.swift */; };
 		BDA282F22045316C00546918 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA282F12045316C00546918 /* Product.swift */; };
@@ -58,6 +57,7 @@
 		BDA73DC12047C3C70089C78D /* URLConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DBF2047C3C70089C78D /* URLConvertable.swift */; };
 		BDA73DC32047C7690089C78D /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DC22047C7690089C78D /* APIServiceTests.swift */; };
 		BDA73DC52047C7920089C78D /* URLRequestConvertorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DC42047C7920089C78D /* URLRequestConvertorTests.swift */; };
+		BDA73DC72047CA840089C78D /* MockSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DC62047CA840089C78D /* MockSerialization.swift */; };
 		BDF827012045E494001DDBAC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF827002045E494001DDBAC /* APIService.swift */; };
 		BDF8270520464CB8001DDBAC /* NumberFormatter+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */; };
 		BDF8270920465F83001DDBAC /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270820465F83001DDBAC /* ReusableView.swift */; };
@@ -70,7 +70,6 @@
 		BDF8271920467041001DDBAC /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8271820467041001DDBAC /* MockAPIService.swift */; };
 		BDF8271B20467243001DDBAC /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8271A20467243001DDBAC /* Parser.swift */; };
 		BDF8271D20467ED0001DDBAC /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8271C20467ED0001DDBAC /* Parsing.swift */; };
-		BDF8272120468E7C001DDBAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA282E820452AF800546918 /* Constants.swift */; };
 		BDF8272220468E7C001DDBAC /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8271220466482001DDBAC /* SplashView.swift */; };
 		BDF8272320468E7C001DDBAC /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16B6AC2045209200DDFBE7 /* ProductListTableViewCell.swift */; };
 		BDF8272420468E7C001DDBAC /* UITableView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270A20465FC5001DDBAC /* UITableView+Util.swift */; };
@@ -148,7 +147,6 @@
 		BD6DECB920450107000543F5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		BD6DECBD20450950000543F5 /* EnvironmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentTests.swift; sourceTree = "<group>"; };
 		BD6DECBF20450ADE000543F5 /* EnvironmentDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDataSource.swift; sourceTree = "<group>"; };
-		BDA282E820452AF800546918 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BDA282EC20452BCC00546918 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		BDA282EE20452C2000546918 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		BDA282F12045316C00546918 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -171,6 +169,7 @@
 		BDA73DBF2047C3C70089C78D /* URLConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConvertable.swift; sourceTree = "<group>"; };
 		BDA73DC22047C7690089C78D /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		BDA73DC42047C7920089C78D /* URLRequestConvertorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestConvertorTests.swift; sourceTree = "<group>"; };
+		BDA73DC62047CA840089C78D /* MockSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSerialization.swift; sourceTree = "<group>"; };
 		BDF827002045E494001DDBAC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Util.swift"; sourceTree = "<group>"; };
 		BDF8270820465F83001DDBAC /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -364,7 +363,6 @@
 		BDA282E720452A5F00546918 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				BDA282E820452AF800546918 /* Constants.swift */,
 				BD16B6A2204510C000DDFBE7 /* Error.swift */,
 			);
 			path = Constant;
@@ -420,6 +418,7 @@
 			children = (
 				BDA73DAD20479BC90089C78D /* MockTimBurtonEnvironment.swift */,
 				BDA73DB32047AE550089C78D /* MockAPIRequest.swift */,
+				BDA73DC62047CA840089C78D /* MockSerialization.swift */,
 				BDA73D8E2047558C0089C78D /* ParsingTests.swift */,
 				BDA73D90204757440089C78D /* APIRequestTests.swift */,
 				BDA73DA4204793CD0089C78D /* HTTPMethodTests.swift */,
@@ -686,7 +685,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDA282E920452AF800546918 /* Constants.swift in Sources */,
 				BDA73DBD2047C32E0089C78D /* URLRequestConvertor.swift in Sources */,
 				BDF8271320466482001DDBAC /* SplashView.swift in Sources */,
 				BD16B6AD2045209200DDFBE7 /* ProductListTableViewCell.swift in Sources */,
@@ -730,6 +728,7 @@
 				BDA73DB92047BE9E0089C78D /* HTTPBodyEncodingTests.swift in Sources */,
 				BDF8275B20474D4A001DDBAC /* NibLoadableViewTests.swift in Sources */,
 				BDA73DC52047C7920089C78D /* URLRequestConvertorTests.swift in Sources */,
+				BDA73DC72047CA840089C78D /* MockSerialization.swift in Sources */,
 				BDA73DAA2047987B0089C78D /* URLConvertorTests.swift in Sources */,
 				BDA73DC32047C7690089C78D /* APIServiceTests.swift in Sources */,
 				BDF827542046F40A001DDBAC /* Error.swift in Sources */,
@@ -754,7 +753,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF8272120468E7C001DDBAC /* Constants.swift in Sources */,
 				BDF8272220468E7C001DDBAC /* SplashView.swift in Sources */,
 				BDF8272320468E7C001DDBAC /* ProductListTableViewCell.swift in Sources */,
 				BDA73DA12047924B0089C78D /* Serializable.swift in Sources */,

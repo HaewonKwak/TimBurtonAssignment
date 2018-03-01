@@ -7,29 +7,44 @@
 //
 
 import XCTest
+@testable import Tim_Burtons
 
 class URLRequestConvertorTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    struct MockURLConvertor: URLConvertable {
+        func makeURL(_ apiRequest: APIRequest) throws -> URL {
+            return URL(string: apiRequest.url)!
         }
     }
+    
+    func testURLRequestConvertorMakingURLRequestWithAPIRequest() {
+        HTTPMethod.allMethods.forEach { method in
+            let apiRequest = MockAPIRequest(method: method)
+            let serialization = MockSerialization()
+            let urlRequestConvertor = URLRequestConvertor(serialization: MockSerialization(),
+                                                          urlConvertor: MockURLConvertor())
+            let urlRequest = try! urlRequestConvertor.makeURLRequest(apiRequest)
+            XCTAssertEqual(urlRequest.url!.absoluteString, apiRequest.url)
+            XCTAssertEqual(urlRequest.allHTTPHeaderFields!, serialization.httpHeaders)
+            XCTAssertEqual(urlRequest.httpMethod, apiRequest.method.string)
+            XCTAssertEqual(urlRequest.timeoutInterval, apiRequest.timeoutInterval)
+            XCTAssertNil(urlRequest.httpBody)
+        }
+    }
+    
+    func testURLRequestConvertorMakingURLRequestWithNonInlineAPIRequestAndParameters() {
+        HTTPMethod.nonInlineMethods.forEach { method in
+            let apiRequest = MockAPIRequest(method: method, parameters: ["key": "test"])
+            let serialization = MockSerialization()
+            let urlRequestConvertor = URLRequestConvertor(serialization: serialization,
+                                                          urlConvertor: MockURLConvertor())
+            XCTAssertNoThrow(try! urlRequestConvertor.makeURLRequest(apiRequest))
+            XCTAssertTrue(serialization.isEncode)
+        }
+    }
+    
+    
+
+    
     
 }

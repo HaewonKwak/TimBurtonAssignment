@@ -37,7 +37,7 @@ class HTTPBodyEncodingTests: XCTestCase {
     func testHTTPBodyServiceWithURLAndParamters() {
         HTTPMethod.nonInlineMethods.forEach { method in
             let apiRequest = MockAPIRequest(method: method, parameters: ["key": "value"])
-            XCTAssertNotNil(try! StubHTTPBodyEncoder().makeHTTPBody(apiRequest))
+            XCTAssertNoThrow(try! StubHTTPBodyEncoder().makeHTTPBody(apiRequest))
         }
     }
 }

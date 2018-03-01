@@ -7,5 +7,5 @@
 //
 
 enum TestError: Error {
-    case assertError
+    case error
 }

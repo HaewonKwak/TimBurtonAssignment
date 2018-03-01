@@ -29,7 +29,7 @@ extension APIService: APIExecutable {
             return completion(.failure(error))
         }
         
-        let task = session.dataTask(with: urlRequest) { [unowned self] (data, response, error) in
+        let task = session.dataTaskWith(request: urlRequest) { [unowned self] (data, response, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     return completion(.failure(error))

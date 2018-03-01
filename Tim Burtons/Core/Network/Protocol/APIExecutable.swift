@@ -11,7 +11,19 @@ protocol APIExecutable {
 }
 
 protocol SessionRequestable {
-    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) -> URLSessionDataTask
+    func dataTaskWith(request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) -> SessionDataTaskable
 }
 
-extension URLSession: SessionRequestable { }
+protocol SessionDataTaskable {
+    func resume()
+}
+
+extension URLSessionDataTask: SessionDataTaskable { }
+
+extension URLSession: SessionRequestable {
+    func dataTaskWith(request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> SessionDataTaskable {
+        return dataTask(with: request, completionHandler: completionHandler)
+    }
+}
+
+

@@ -9,4 +9,13 @@
 enum Result {
     case success(Any)
     case failure(Error)
+    
+    var isSuccess: Bool {
+        switch self {
+        case .success:
+            return true
+        case .failure:
+            return false
+        }
+    }
 }
