@@ -1,0 +1,36 @@
+{
+    "products": [{
+                 "id": 1,
+                 "name": "Coffee",
+                 "size": "small",
+                 "cost": 0.99,
+                 "type": "drink"
+                 },
+                 {
+                 "id": 2,
+                 "name": "Coffee",
+                 "size": "medium",
+                 "cost": 1.22,
+                 "type": "drink"
+                 },
+                 {
+                 "id": 3,
+                 "name": "Coffee",
+                 "size": "large",
+                 "cost": 1.54,
+                 "type": "drink"
+                 },
+                 {
+                 "id": 4,
+                 "name": "Lemon Poppy Seed Cake",
+                 "cost": 0.99,
+                 "type": "food"
+                 },
+                 {
+                 "id": 5,
+                 "name": "Banana",
+                 "cost": 0.99,
+                 "type": "food"
+                 }
+                 ]
+}

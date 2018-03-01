@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SplashView" customModule="Tim_Burtons" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0z-fr-Kwb">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DRw-aq-Mri">
+                    <rect key="frame" x="169" y="325" width="37" height="37"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="t0z-fr-Kwb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="39c-GL-tXs"/>
+                <constraint firstItem="DRw-aq-Mri" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="OVw-km-YRQ"/>
+                <constraint firstItem="t0z-fr-Kwb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hca-CL-cBq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="t0z-fr-Kwb" secondAttribute="bottom" id="sGF-iE-qwG"/>
+                <constraint firstItem="DRw-aq-Mri" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="umy-Y3-4Gi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="t0z-fr-Kwb" secondAttribute="trailing" id="wNP-HJ-clo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

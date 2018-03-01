@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PzR-9q-5Os">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="f0s-Gs-Ud2">
+            <objects>
+                <navigationController id="PzR-9q-5Os" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Rectangle" selectedImage="RectangleSelected" id="wEH-b8-6Zw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tnx-j4-vUg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fAW-in-xca" kind="relationship" relationship="rootViewController" id="9Ea-uq-jhw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JoZ-UQ-7WL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588" y="24"/>
+        </scene>
+        <!--Tim Burtons-->
+        <scene sceneID="2DN-rt-djb">
+            <objects>
+                <viewController id="fAW-in-xca" customClass="HomeViewController" customModule="Tim_Burtons" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OPi-mk-dyq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="iiW-nY-dIq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tim Burtons" id="LuG-gf-Ns0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ljX-Zg-0aZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="24"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rectangle" width="26" height="26"/>
+        <image name="RectangleSelected" width="25" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WHA-JM-Eea">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ave-Dm-CU7">
+            <objects>
+                <tabBarController id="WHA-JM-Eea" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BKi-hu-Wiw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hvX-DT-D8D" kind="relationship" relationship="viewControllers" id="X5d-Qi-UHE"/>
+                        <segue destination="iVT-wp-NoI" kind="relationship" relationship="viewControllers" id="DRh-a9-v4t"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3K-sy-wzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-353" y="75"/>
+        </scene>
+        <!--Product-->
+        <scene sceneID="8lO-Y8-xXG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Product" id="iVT-wp-NoI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Product" image="Star" id="Qu7-19-MxU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LXK-gP-1oh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="179"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="XIT-cE-RyE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="hvX-DT-D8D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Rectangle" id="TXy-o0-Fi6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jwo-G8-UfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="-123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rectangle" width="26" height="26"/>
+        <image name="Star" width="28" height="26"/>
+    </resources>
+</document>

@@ -4,10 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Tim Burtons AppStore.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Tim Burtons.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>BD6DEC8E2044F129000543F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD6DECA22044F129000543F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDF8271E20468E7C001DDBAC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
