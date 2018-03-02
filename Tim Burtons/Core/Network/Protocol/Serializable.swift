@@ -11,7 +11,7 @@ protocol HTTPBodyEncoding {
 }
 
 extension HTTPBodyEncoding {
-    func makeHTTPBody(_ apiRequest: APIRequest) throws -> Data? {
+    func makeHTTPBody(_ apiRequest: APIRequestable) throws -> Data? {
         guard !apiRequest.method.isInlineURL,
             let parameter = apiRequest.parameters else {
                 return nil

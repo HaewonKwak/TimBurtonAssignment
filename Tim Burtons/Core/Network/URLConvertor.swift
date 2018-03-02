@@ -8,7 +8,7 @@
 
 struct URLConvertor: URLConvertable {
     
-    func makeURL(_ apiRequest: APIRequest) throws -> URL {
+    func makeURL(_ apiRequest: APIRequestable) throws -> URL {
         guard apiRequest.method.isInlineURL else {
             return try makeURL(string: apiRequest.url)
         }

@@ -1,12 +1,12 @@
 //
-//  APIRequest.swift
+//  APIProtocol.swift
 //  Tim Burtons
 //
 //  Created by Haewon Kwak on 2018-02-27.
 //  Copyright © 2018 Tim Burtons. All rights reserved.
 //
 
-protocol APIRequest {
+protocol APIRequestable {
     var environment: EnvironmentConfigurable { get }
     var urlRoute: String { get }
     var method: HTTPMethod { get }
@@ -15,7 +15,7 @@ protocol APIRequest {
     var additionalHeaders: [String: String]? { get }
 }
 
-extension APIRequest {
+extension APIRequestable {
     
     var parameters: [String: Any]? {
         return nil
@@ -33,5 +33,12 @@ extension APIRequest {
         return "\(environment.baseURL)\(urlRoute)"
     }
 }
+
+protocol APIResponsable {
+    associatedtype Item
+    func parseFromResponse(_ response: Any) -> Item?
+}
+
+protocol APIProtocol: APIRequestable, APIResponsable { }
 
 enum Request { }

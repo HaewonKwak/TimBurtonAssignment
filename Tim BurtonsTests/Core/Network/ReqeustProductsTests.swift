@@ -22,4 +22,28 @@ class ReqeustProductsTests: XCTestCase {
         XCTAssertEqual(request.method, .get)
     }
     
+    func testRequestParseProducts() {
+        
+        let productDictionary: [String: Any] = ["id": 1,
+                                                "name": "name",
+                                                "size": "small",
+                                                "cost": 0.21,
+                                                "type": "drink"]
+        let productsDictionary = ["products": [productDictionary]]
+        let numberOfProducts = request.parseFromResponse(productsDictionary)?.count
+        XCTAssertEqual(numberOfProducts, 1)
+    }
+    
+    func testRequestParseEmptyResponse() {
+        
+        let productsDictionary = ["products": []]
+        XCTAssertTrue(request.parseFromResponse(productsDictionary)!.isEmpty)
+    }
+
+    func testRequestParseWrongResponse() {
+        
+        let productsDictionary = ["product": []]
+        XCTAssertNil(request.parseFromResponse(productsDictionary))
+    }
+
 }

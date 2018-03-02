@@ -12,7 +12,7 @@ import XCTest
 class URLRequestConvertorTests: XCTestCase {
     
     struct MockURLConvertor: URLConvertable {
-        func makeURL(_ apiRequest: APIRequest) throws -> URL {
+        func makeURL(_ apiRequest: APIRequestable) throws -> URL {
             return URL(string: apiRequest.url)!
         }
     }

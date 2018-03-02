@@ -16,7 +16,7 @@ struct URLRequestConvertor: URLRequestConvertable {
         self.urlConvertor = urlConvertor
     }
     
-    func makeURLRequest(_ apiRequest: APIRequest) throws -> URLRequest {
+    func makeURLRequest(_ apiRequest: APIRequestable) throws -> URLRequest {
         
         let url = try urlConvertor.makeURL(apiRequest)
         let body = try serialization.makeHTTPBody(apiRequest)

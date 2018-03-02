@@ -7,7 +7,8 @@
 //
 
 extension Request {
-    struct Products: APIRequest {
+    struct Products: APIProtocol {
+
         let environment: EnvironmentConfigurable
         let urlRoute: String = "v1/products"
         let method: HTTPMethod = .get
@@ -15,5 +16,22 @@ extension Request {
         init(environment: EnvironmentConfigurable = Environment()) {
             self.environment = environment
         }
+        
+        typealias Item = [Product]
+        
+        func parseFromResponse(_ response: Any) -> [Product]? {
+            guard let productsDictionaries = Parser(value: response)["products"].dictionalArrayValue else {
+                return nil
+            }
+            
+            let parsers = productsDictionaries.map { Parser(value: $0) }
+            guard let products = try? Product.make(parsers: parsers) else {
+                return nil
+            }
+            
+            return products
+        }
+
     }
+    
 }

@@ -7,10 +7,10 @@
 //
 
 protocol URLConvertable {
-    func makeURL(_ apiRequest: APIRequest) throws -> URL
+    func makeURL(_ apiRequest: APIRequestable) throws -> URL
 }
 
 protocol URLRequestConvertable {
     var serialization: Serializable { get }
-    func makeURLRequest(_ apiRequest: APIRequest) throws -> URLRequest
+    func makeURLRequest(_ apiRequest: APIRequestable) throws -> URLRequest
 }

@@ -20,7 +20,7 @@ class APIService {
 
 // MARK: - APIExecutable
 extension APIService: APIExecutable {
-    func execute(_ request: APIRequest, completion: @escaping (Result) -> ()) {
+    func execute(_ request: APIRequestable, completion: @escaping (Result) -> ()) {
         let urlRequest: URLRequest
         
         do {
@@ -29,7 +29,7 @@ extension APIService: APIExecutable {
             return completion(.failure(error))
         }
         
-        let task = session.dataTaskWith(request: urlRequest) { [unowned self] (data, response, error) in
+        let task = session.dataTask(request: urlRequest) { [unowned self] (data, response, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     return completion(.failure(error))

@@ -8,7 +8,7 @@
 
 @testable import Tim_Burtons
 
-struct MockAPIRequest: APIRequest {
+struct MockAPIRequest: APIRequestable {
     let environment: EnvironmentConfigurable = MockTimBurtonEnvironment()
     let urlRoute = "v1/products"
     let method: HTTPMethod

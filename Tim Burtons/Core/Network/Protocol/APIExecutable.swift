@@ -7,11 +7,11 @@
 //
 
 protocol APIExecutable {
-    func execute(_ request: APIRequest, completion: @escaping (Result) -> ())
+    func execute(_ request: APIRequestable, completion: @escaping (Result) -> ())
 }
 
 protocol SessionRequestable {
-    func dataTaskWith(request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) -> SessionDataTaskable
+    func dataTask(request: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) -> SessionDataTaskable
 }
 
 protocol SessionDataTaskable {
@@ -21,8 +21,8 @@ protocol SessionDataTaskable {
 extension URLSessionDataTask: SessionDataTaskable { }
 
 extension URLSession: SessionRequestable {
-    func dataTaskWith(request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> SessionDataTaskable {
-        return dataTask(with: request, completionHandler: completionHandler)
+    func dataTask(request: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void) -> SessionDataTaskable {
+        return dataTask(with: request, completionHandler: completion)
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  APIRequestTests.swift
+//  APIRequestableTests.swift
 //  Tim BurtonsTests
 //
 //  Created by Haewon Kwak on 2018-02-28.
@@ -9,19 +9,19 @@
 import XCTest
 @testable import Tim_Burtons
 
-class APIRequestTests: XCTestCase {
+class APIRequestableTests: XCTestCase {
 
     struct MockEnvironment: EnvironmentConfigurable {
         let baseURL = "http://www.rogers.com/"
     }
     
-    struct MockAPIRequest: APIRequest {
+    struct MockAPIRequest: APIRequestable {
         let environment: EnvironmentConfigurable = MockEnvironment()
         let urlRoute = "api/products"
         let method: HTTPMethod = .get
     }
 
-    var apiRequest: APIRequest!
+    var apiRequest: APIRequestable!
     
     override func setUp() {
         super.setUp()

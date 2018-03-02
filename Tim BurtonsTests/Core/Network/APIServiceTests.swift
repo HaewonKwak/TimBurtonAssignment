@@ -14,7 +14,7 @@ class APIServiceTests: XCTestCase {
     class MockURLRequestConvertor: URLRequestConvertable {
         let serialization: Serializable = MockSerialization()
         var shouldThrowError = false
-        func makeURLRequest(_ apiRequest: APIRequest) throws -> URLRequest {
+        func makeURLRequest(_ apiRequest: APIRequestable) throws -> URLRequest {
             if shouldThrowError {
                 throw TestError.error
             }
@@ -37,12 +37,12 @@ class APIServiceTests: XCTestCase {
             self.response = response
         }
         
-        func dataTaskWith(request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> SessionDataTaskable {
+        func dataTask(request: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void) -> SessionDataTaskable {
             switch response {
             case .success(let data):
-                completionHandler(data, nil, nil)
+                completion(data, nil, nil)
             case .failure(let error):
-                completionHandler(nil, nil, error)
+                completion(nil, nil, error)
             }
             return MockURLSessionDataTask()
         }

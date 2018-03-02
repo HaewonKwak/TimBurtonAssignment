@@ -8,6 +8,7 @@
 
 class ProductListService {
     private var products: [Product] = []
+
     let apiExecutor: APIExecutable
     
     init(apiExecutor: APIExecutable = APIService.shared) {
@@ -24,7 +25,7 @@ class ProductListService {
             
             switch result {
             case .success(let response):
-                guard let products = strongSelf.parseResponse(from: response) else {
+                guard let products = request.parseFromResponse(response) else {
                     return completion(ParserError.unableToParse)
                 }
                 strongSelf.products = products
@@ -33,19 +34,6 @@ class ProductListService {
                 completion(error)
             }
         }
-    }
-    
-    private func parseResponse(from response: Any) -> [Product]? {
-        guard let productsDictionaries = Parser(value: response)["products"].dictionalArrayValue else {
-            return nil
-        }
-        
-        let parsers = productsDictionaries.map { Parser(value: $0) }
-        guard let products = try? Product.make(parsers: parsers) else {
-            return nil
-        }
-        
-        return products
     }
 }
 
