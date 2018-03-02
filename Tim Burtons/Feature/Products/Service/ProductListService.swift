@@ -15,9 +15,8 @@ class ProductListService {
         self.apiExecutor = apiExecutor
     }
     
-    func fetchDataSource(completion: @escaping (Error?) -> ()) {
+    func fetchDataSource<T: APIProtocol>(request: T, completion: @escaping (Error?) -> ()) where T.Item == [Product] {
         
-        let request = Request.Products()
         apiExecutor.execute(request) { [weak self] result in
             guard let strongSelf = self else {
                 return

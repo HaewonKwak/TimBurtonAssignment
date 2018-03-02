@@ -27,7 +27,8 @@ class ProductListViewController: UIViewController {
 extension ProductListViewController {
     func fetchDataSource() {
         SplashView.show(in: view)
-        service.fetchDataSource() { [unowned self] error in
+        let request = Request.Products()
+        service.fetchDataSource(request: request) { [unowned self] error in
             SplashView.remove(from: self.view)
             guard let error = error else {
                 return self.tableView.reloadData()

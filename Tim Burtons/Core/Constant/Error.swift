@@ -8,6 +8,7 @@
 
 enum NetworkError: String, LocalizedError {
     case missingURL = "URL is missing"
+    case noData = "No data response"
 }
 
 enum ParserError: String, LocalizedError {

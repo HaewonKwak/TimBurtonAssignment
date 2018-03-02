@@ -23,11 +23,7 @@ class ProductTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        productDictionary = ["id": 1,
-                             "name": "name",
-                             "size": "small",
-                             "cost": 0.21,
-                             "type": "drink"]
+        productDictionary = Mock.productDictionary
     }
     
     func testProductInitWithParser() {

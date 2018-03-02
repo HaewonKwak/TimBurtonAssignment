@@ -24,12 +24,7 @@ class ReqeustProductsTests: XCTestCase {
     
     func testRequestParseProducts() {
         
-        let productDictionary: [String: Any] = ["id": 1,
-                                                "name": "name",
-                                                "size": "small",
-                                                "cost": 0.21,
-                                                "type": "drink"]
-        let productsDictionary = ["products": [productDictionary]]
+        let productsDictionary = ["products": [Mock.productDictionary]]
         let numberOfProducts = request.parseFromResponse(productsDictionary)?.count
         XCTAssertEqual(numberOfProducts, 1)
     }

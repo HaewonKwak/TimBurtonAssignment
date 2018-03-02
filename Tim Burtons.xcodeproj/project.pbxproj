@@ -20,6 +20,8 @@
 		BD16B6B320452E2100DDFBE7 /* UIFont+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16B6B220452E2100DDFBE7 /* UIFont+Util.swift */; };
 		BD16B6B52045A2B100DDFBE7 /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16B6B42045A2B100DDFBE7 /* ListDataSource.swift */; };
 		BD16B6BA2045B7A400DDFBE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16B6B92045B7A400DDFBE7 /* HomeViewController.swift */; };
+		BD4AFAA22048D14200F796B1 /* ProductListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4AFAA12048D14200F796B1 /* ProductListServiceTests.swift */; };
+		BD4AFAA42048D2BC00F796B1 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4AFAA32048D2BC00F796B1 /* Mock.swift */; };
 		BD6DEC932044F129000543F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DEC922044F129000543F5 /* AppDelegate.swift */; };
 		BD6DEC982044F129000543F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6DEC962044F129000543F5 /* Main.storyboard */; };
 		BD6DEC9A2044F129000543F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6DEC992044F129000543F5 /* Assets.xcassets */; };
@@ -134,6 +136,8 @@
 		BD16B6B220452E2100DDFBE7 /* UIFont+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Util.swift"; sourceTree = "<group>"; };
 		BD16B6B42045A2B100DDFBE7 /* ListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
 		BD16B6B92045B7A400DDFBE7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BD4AFAA12048D14200F796B1 /* ProductListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListServiceTests.swift; sourceTree = "<group>"; };
+		BD4AFAA32048D2BC00F796B1 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		BD6DEC8F2044F129000543F5 /* Tim Burtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tim Burtons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD6DEC922044F129000543F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD6DEC972044F129000543F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -235,7 +239,7 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		BD16B6A12044B79C00DDFBE7 /* Product */ = {
+		BD16B6A12044B79C00DDFBE7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				BDF8270720465745001DDBAC /* Service */,
@@ -243,7 +247,7 @@
 				BD16B6A42045198200DDFBE7 /* Product.storyboard */,
 				BD16B6A820451EA100DDFBE7 /* ProductListViewController.swift */,
 			);
-			path = Product;
+			path = Products;
 			sourceTree = "<group>";
 		};
 		BD16B6AE204525C900DDFBE7 /* DataSource */ = {
@@ -262,6 +266,22 @@
 				BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BD4AFA9F2048D10C00F796B1 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				BD4AFAA02048D12000F796B1 /* Products */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		BD4AFAA02048D12000F796B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD4AFAA12048D14200F796B1 /* ProductListServiceTests.swift */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 		BD6DEC862044F129000543F5 = {
@@ -300,6 +320,7 @@
 			children = (
 				BDF827522046F3F5001DDBAC /* Resources */,
 				BDF8274E204690CD001DDBAC /* Core */,
+				BD4AFA9F2048D10C00F796B1 /* Feature */,
 				BD6DECA72044F129000543F5 /* Tim_BurtonsTests.swift */,
 				BD6DECA92044F129000543F5 /* Info.plist */,
 			);
@@ -333,7 +354,7 @@
 			children = (
 				BD16B69D2044B6F900DDFBE7 /* Main */,
 				BD16B69E2044B70500DDFBE7 /* Home */,
-				BD16B6A12044B79C00DDFBE7 /* Product */,
+				BD16B6A12044B79C00DDFBE7 /* Products */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -482,6 +503,7 @@
 		BDF8274F204690D5001DDBAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD4AFAA32048D2BC00F796B1 /* Mock.swift */,
 				BDF82750204690E6001DDBAC /* ProductTests.swift */,
 				BDA73DB52047BA450089C78D /* ParserTests.swift */,
 			);
@@ -734,7 +756,9 @@
 				BDF827542046F40A001DDBAC /* Error.swift in Sources */,
 				BD6DECA82044F129000543F5 /* Tim_BurtonsTests.swift in Sources */,
 				BDF8275F20474F06001DDBAC /* ReusableViewTests.swift in Sources */,
+				BD4AFAA22048D14200F796B1 /* ProductListServiceTests.swift in Sources */,
 				BDA73DAC20479A100089C78D /* ReqeustProductsTests.swift in Sources */,
+				BD4AFAA42048D2BC00F796B1 /* Mock.swift in Sources */,
 				BDA73D91204757440089C78D /* APIRequestableTests.swift in Sources */,
 				BDA73DB02047AB350089C78D /* JSONSerializerTests.swift in Sources */,
 				BDA73DAE20479BC90089C78D /* MockTimBurtonEnvironment.swift in Sources */,

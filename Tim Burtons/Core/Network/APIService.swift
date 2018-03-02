@@ -36,7 +36,7 @@ extension APIService: APIExecutable {
                 }
                 do {
                     guard let data = data else {
-                        throw NetworkError.missingURL
+                        throw NetworkError.noData
                     }
                     let object = try self.urlRequestConvertor.serialization.decodeObject(with: data)
                     completion(.success(object))
