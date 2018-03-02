@@ -52,6 +52,10 @@ class ProductListServiceTests: XCTestCase {
         XCTAssertTrue(request.isParsed)
     }
     
+    func testProductListServiceNumberOfSection() {
+        XCTAssertEqual(service.numberOfSections, 1)
+    }
+    
     func testProductListServiceReturningNumberOfRowsAtFirstTime() {
         XCTAssertEqual(service.numberOfRows(inSection: 0), 0)
     }

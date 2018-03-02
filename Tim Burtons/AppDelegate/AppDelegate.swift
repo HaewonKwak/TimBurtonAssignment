@@ -27,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 // MARK: - UI Initialize
-fileprivate extension AppDelegate {
+private extension AppDelegate {
     func initAppearance() {
-        UINavigationBar.appearance().titleTextAttributes = [.font: UIFont.Helvetica.regular17, 
+        UINavigationBar.appearance().titleTextAttributes = [.font: UIFont.Helvetica.regular,
                                                             .foregroundColor: UIColor.title]
         
         UIBarButtonItem.appearance().tintColor = .defaultTint
@@ -37,7 +37,7 @@ fileprivate extension AppDelegate {
         UITabBar.appearance().tintColor = .defaultTint
         UITabBar.appearance().unselectedItemTintColor = .unselectedTabBar
         
-        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.Helvetica.regular10,
+        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.Helvetica.regular.withSize(10),
                                                           .foregroundColor: UIColor.unselectedTabBar], for: .normal)
     }
 }

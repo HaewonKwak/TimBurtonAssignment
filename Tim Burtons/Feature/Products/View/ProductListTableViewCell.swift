@@ -14,9 +14,9 @@ class ProductListTableViewCell: UITableViewCell, ReusableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        nameLabel.font = UIFont.Helvetica.regular17
+        nameLabel.font = UIFont.Helvetica.regular
         nameLabel.textColor = .title
-        priceLabel.font = UIFont.Helvetica.regular17
+        priceLabel.font = UIFont.Helvetica.regular
         priceLabel.textColor = .detail
         tintColor = .cellTint
     }

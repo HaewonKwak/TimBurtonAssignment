@@ -62,6 +62,21 @@ extension Parser {
     var dictionaryValue: [String: Any]? {
         return value(of: [String: Any].self)
     }
+    
+    func objectValue<Type>() throws -> Type where Type: Parsing {
+        return try Type(parser: self)
+    }
+    
+    func objectValues<Type>() throws -> [Type] where Type: Parsing {
+        guard let values = dictionalArrayValue else {
+            guard let _ = arrayValue else {
+                throw ParserError.unableToParse
+            }
+            return []
+        }
+        
+        return try Type.make(parsers: values.map { Parser(value: $0) })
+    }
 }
 
 // MARK: - Throws

@@ -11,30 +11,65 @@ protocol EnvironmentConfigurable {
 }
 
 struct Environment {
-
-    static let devBaseURLKey = "dev"
-    static let qaBaseURLKey = "qa"
-    static let productionBaseURLKey = "production"
+    enum BaseURL {
+        case dev
+        case qa
+        case production
+        
+        init(key: String) {
+            #if APPSTORE
+                return self = .production
+            #endif
+            switch key {
+            case "qa": self = .qa
+            case "production": self = .production
+            default: self = .dev
+            }
+        }
+        
+        var url: String {
+            switch self {
+            case .dev: return "https://dev.api.timburtons.com/"
+            case .qa: return "https://qa.api.timburtons.com/"
+            case .production: return "https://api.timburtons.com/"
+            }
+        }
+        
+        var key: String {
+            switch self {
+            case .dev: return "dev"
+            case .qa: return "qa"
+            case .production: return "production"
+            }
+        }
+    }
     
-    static let versionInfoKey = "CFBundleShortVersionString"
-    static let buildInfoKey = "CFBundleVersion"
-
-    #if APPSTORE
-    private let defaultBaseURLKey = productionBaseURLKey
-    #else
-    private let defaultBaseURLKey = devBaseURLKey
-    #endif
+    enum InfoKey {
+        case version
+        case build
+        
+        var key: String {
+            switch self {
+            case .version: return "CFBundleShortVersionString"
+            case .build: return "CFBundleVersion"
+            }
+        }
+    }
     
-    static let serverPreference = "server_preference"
-    static let versionPreference = "version_preference"
-    static let buildPreference = "build_preference"
+    enum Preference {
+        case server
+        case version
+        case build
+        
+        var key: String {
+            switch self {
+            case .server: return "server_preference"
+            case .version: return "version_preference"
+            case .build: return "build_preference"
+            }
+        }
+    }
     
-    static let baseURLs: [String: String] = [
-        devBaseURLKey: "https://dev.api.timburtons.com/",
-        qaBaseURLKey: "https://qa.api.timburtons.com/",
-        productionBaseURLKey: "https://api.timburtons.com/"
-    ]
-
     private let dataSource: EnvironmentDataSource
     
     init(dataSource: EnvironmentDataSource = UserDefaults.standard) {
@@ -42,26 +77,26 @@ struct Environment {
     }
     
     func registerSettingsDefaults() {
-        let appDefaults: [String: AnyObject] = [Environment.serverPreference: defaultBaseURLKey as AnyObject]
+        let appDefaults: [String: AnyObject] = [Preference.server.key: BaseURL(key: "").key as AnyObject]
         dataSource.register(defaults: appDefaults)
     }
     
     func updateVersionNumber(withInfoDictionary infoDictionary: [String: Any]? = Bundle.main.infoDictionary) {
         
-        guard let version = infoDictionary?[Environment.versionInfoKey] as? String,
-            let build = infoDictionary?[Environment.buildInfoKey] as? String else {
+        guard let version = infoDictionary?[InfoKey.version.key] as? String,
+            let build = infoDictionary?[InfoKey.build.key] as? String else {
                 return
         }
         
-        dataSource.set(version, forKey: Environment.versionPreference)
-        dataSource.set(build, forKey: Environment.buildPreference)
+        dataSource.set(version, forKey: Preference.version.key)
+        dataSource.set(build, forKey: Preference.build.key)
     }
 }
 
 extension Environment: EnvironmentConfigurable {
     var baseURL: String {
-        let baseURLKey = dataSource.string(forKey: Environment.serverPreference) ?? defaultBaseURLKey
-        return Environment.baseURLs[baseURLKey] ?? ""
+        let key = dataSource.string(forKey: Preference.server.key) ?? ""
+        return BaseURL(key: key).url
     }
 }
 

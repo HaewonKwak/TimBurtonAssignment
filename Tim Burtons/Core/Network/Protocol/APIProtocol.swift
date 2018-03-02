@@ -41,4 +41,4 @@ protocol APIResponsable {
 
 protocol APIProtocol: APIRequestable, APIResponsable { }
 
-enum Request { }
+

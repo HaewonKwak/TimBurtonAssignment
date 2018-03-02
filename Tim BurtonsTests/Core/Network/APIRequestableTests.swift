@@ -44,3 +44,4 @@ class APIRequestableTests: XCTestCase {
         XCTAssertEqual(apiRequest.url, "http://www.rogers.com/api/products")
     }
 }
+

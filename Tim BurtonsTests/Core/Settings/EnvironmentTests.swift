@@ -49,9 +49,14 @@ class EnvironmentTests: XCTestCase {
     
     var environment: Environment!
     var dataSource: MockEnvironmentDataSource!
+    
+    typealias BaseURL = Environment.BaseURL
+    typealias InfoKey = Environment.InfoKey
+    typealias Preference = Environment.Preference
+    
     override func setUp() {
         super.setUp()
-        dataSource = MockEnvironmentDataSource(urlKey: Environment.devBaseURLKey)
+        dataSource = MockEnvironmentDataSource(urlKey: BaseURL.dev.key)
         environment = Environment(dataSource: dataSource)
     }
     
@@ -62,7 +67,7 @@ class EnvironmentTests: XCTestCase {
     
     func testEnvironmentUpdateVersionNumber() {
         
-        let infoDictionaries: [[String: Any]?] = [nil, [:], [Environment.versionInfoKey: "1.0", Environment.buildInfoKey: "2.0"]]
+        let infoDictionaries: [[String: Any]?] = [nil, [:], [InfoKey.version.key: "1.0", InfoKey.build.key: "2.0"]]
         let expectedValue: [(String?, String?)] = [(nil, nil), (nil, nil), ("1.0", "2.0")]
         zip(infoDictionaries, expectedValue).forEach { dictionary, value in
             let dataSource = MockEnvironmentDataSource(urlKey: "")
@@ -75,11 +80,11 @@ class EnvironmentTests: XCTestCase {
     
     func testEnvironmentReturningBaseURL() {
         
-        let keys = [Environment.devBaseURLKey, Environment.qaBaseURLKey, Environment.productionBaseURLKey]
+        let keys: [BaseURL] = [.dev, .qa, .production]
         keys.forEach { key in
-            dataSource.urlKey = key
+            dataSource.urlKey = key.key
             let devBaseURL = environment.baseURL
-            XCTAssertEqual(devBaseURL, Environment.baseURLs[key])
+            XCTAssertEqual(devBaseURL, key.url)
         }
     }
 }

@@ -60,7 +60,6 @@
 		BDA73DC52047C7920089C78D /* URLRequestConvertorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DC42047C7920089C78D /* URLRequestConvertorTests.swift */; };
 		BDA73DC72047CA840089C78D /* MockSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA73DC62047CA840089C78D /* MockSerialization.swift */; };
 		BDF827012045E494001DDBAC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF827002045E494001DDBAC /* APIService.swift */; };
-		BDF8270520464CB8001DDBAC /* NumberFormatter+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */; };
 		BDF8270920465F83001DDBAC /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270820465F83001DDBAC /* ReusableView.swift */; };
 		BDF8270B20465FC5001DDBAC /* UITableView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270A20465FC5001DDBAC /* UITableView+Util.swift */; };
 		BDF8270D2046621B001DDBAC /* v1:products.json in Resources */ = {isa = PBXBuildFile; fileRef = BDF8270C2046621B001DDBAC /* v1:products.json */; };
@@ -87,7 +86,6 @@
 		BDF8273020468E7C001DDBAC /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8271C20467ED0001DDBAC /* Parsing.swift */; };
 		BDF8273120468E7C001DDBAC /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8271A20467243001DDBAC /* Parser.swift */; };
 		BDF8273220468E7C001DDBAC /* UIColor+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16B6B020452CA100DDFBE7 /* UIColor+Util.swift */; };
-		BDF8273320468E7C001DDBAC /* NumberFormatter+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */; };
 		BDF8273420468E7C001DDBAC /* UIFont+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16B6B220452E2100DDFBE7 /* UIFont+Util.swift */; };
 		BDF8273520468E7C001DDBAC /* APIExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16B6992044B14600DDFBE7 /* APIExecutable.swift */; };
 		BDF8273620468E7C001DDBAC /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16B6B42045A2B100DDFBE7 /* ListDataSource.swift */; };
@@ -173,7 +171,6 @@
 		BDA73DC42047C7920089C78D /* URLRequestConvertorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestConvertorTests.swift; sourceTree = "<group>"; };
 		BDA73DC62047CA840089C78D /* MockSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSerialization.swift; sourceTree = "<group>"; };
 		BDF827002045E494001DDBAC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Util.swift"; sourceTree = "<group>"; };
 		BDF8270820465F83001DDBAC /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		BDF8270A20465FC5001DDBAC /* UITableView+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Util.swift"; sourceTree = "<group>"; };
 		BDF8270C2046621B001DDBAC /* v1:products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "v1:products.json"; sourceTree = "<group>"; };
@@ -231,7 +228,7 @@
 		BD16B69E2044B70500DDFBE7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BD16B6B92045B7A400DDFBE7 /* HomeViewController.swift */,
+				BDB03CEA2048F5270012546F /* ViewController */,
 				BD16B69F2044B79500DDFBE7 /* Home.storyboard */,
 			);
 			path = Home;
@@ -241,9 +238,9 @@
 			isa = PBXGroup;
 			children = (
 				BDF8270720465745001DDBAC /* Service */,
-				BDF827062046573A001DDBAC /* Views */,
+				BDF827062046573A001DDBAC /* View */,
+				BDB03CEB2048F5320012546F /* ViewController */,
 				BD16B6A42045198200DDFBE7 /* Product.storyboard */,
-				BD16B6A820451EA100DDFBE7 /* ProductListViewController.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -261,7 +258,6 @@
 			children = (
 				BD16B6B020452CA100DDFBE7 /* UIColor+Util.swift */,
 				BD16B6B220452E2100DDFBE7 /* UIFont+Util.swift */,
-				BDF8270420464CB8001DDBAC /* NumberFormatter+Util.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -306,6 +302,7 @@
 			children = (
 				BD6DECB22044F223000543F5 /* AppDelegate */,
 				BD6DECB32044F235000543F5 /* Core */,
+				BDB03CED2048F5A20012546F /* DataModel */,
 				BD6DECB42044F23B000543F5 /* Feature */,
 				BD6DECB52044F246000543F5 /* Resources */,
 				BD6DEC9B2044F129000543F5 /* LaunchScreen.storyboard */,
@@ -415,7 +412,6 @@
 			children = (
 				BDA73DB72047BA610089C78D /* Protocol */,
 				BDF8271A20467243001DDBAC /* Parser.swift */,
-				BDA282F12045316C00546918 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -459,12 +455,36 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		BDF827062046573A001DDBAC /* Views */ = {
+		BDB03CEA2048F5270012546F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD16B6B92045B7A400DDFBE7 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BDB03CEB2048F5320012546F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD16B6A820451EA100DDFBE7 /* ProductListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BDB03CED2048F5A20012546F /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDA282F12045316C00546918 /* Product.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		BDF827062046573A001DDBAC /* View */ = {
 			isa = PBXGroup;
 			children = (
 				BD16B6AC2045209200DDFBE7 /* ProductListTableViewCell.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		BDF8270720465745001DDBAC /* Service */ = {
@@ -726,7 +746,6 @@
 				BDF8271D20467ED0001DDBAC /* Parsing.swift in Sources */,
 				BDF8271B20467243001DDBAC /* Parser.swift in Sources */,
 				BD16B6B120452CA100DDFBE7 /* UIColor+Util.swift in Sources */,
-				BDF8270520464CB8001DDBAC /* NumberFormatter+Util.swift in Sources */,
 				BD16B6B320452E2100DDFBE7 /* UIFont+Util.swift in Sources */,
 				BD16B69A2044B14600DDFBE7 /* APIExecutable.swift in Sources */,
 				BD16B6B52045A2B100DDFBE7 /* ListDataSource.swift in Sources */,
@@ -793,7 +812,6 @@
 				BDA73DBE2047C32E0089C78D /* URLRequestConvertor.swift in Sources */,
 				BDF8273120468E7C001DDBAC /* Parser.swift in Sources */,
 				BDF8273220468E7C001DDBAC /* UIColor+Util.swift in Sources */,
-				BDF8273320468E7C001DDBAC /* NumberFormatter+Util.swift in Sources */,
 				BDF8273420468E7C001DDBAC /* UIFont+Util.swift in Sources */,
 				BDF8273520468E7C001DDBAC /* APIExecutable.swift in Sources */,
 				BDF8273620468E7C001DDBAC /* ListDataSource.swift in Sources */,
