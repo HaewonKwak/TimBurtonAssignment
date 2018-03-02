@@ -26,7 +26,6 @@
 		BD6DEC982044F129000543F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6DEC962044F129000543F5 /* Main.storyboard */; };
 		BD6DEC9A2044F129000543F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6DEC992044F129000543F5 /* Assets.xcassets */; };
 		BD6DEC9D2044F129000543F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6DEC9B2044F129000543F5 /* LaunchScreen.storyboard */; };
-		BD6DECA82044F129000543F5 /* Tim_BurtonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DECA72044F129000543F5 /* Tim_BurtonsTests.swift */; };
 		BD6DECB72044F26C000543F5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD6DECB62044F26C000543F5 /* Settings.bundle */; };
 		BD6DECBA20450107000543F5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DECB920450107000543F5 /* Environment.swift */; };
 		BD6DECBE20450950000543F5 /* EnvironmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DECBD20450950000543F5 /* EnvironmentTests.swift */; };
@@ -145,7 +144,6 @@
 		BD6DEC9C2044F129000543F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD6DEC9E2044F129000543F5 /* TimBurton-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimBurton-Info.plist"; sourceTree = "<group>"; };
 		BD6DECA32044F129000543F5 /* Tim BurtonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tim BurtonsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD6DECA72044F129000543F5 /* Tim_BurtonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tim_BurtonsTests.swift; sourceTree = "<group>"; };
 		BD6DECA92044F129000543F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD6DECB62044F26C000543F5 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BD6DECB920450107000543F5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -321,7 +319,6 @@
 				BDF827522046F3F5001DDBAC /* Resources */,
 				BDF8274E204690CD001DDBAC /* Core */,
 				BD4AFA9F2048D10C00F796B1 /* Feature */,
-				BD6DECA72044F129000543F5 /* Tim_BurtonsTests.swift */,
 				BD6DECA92044F129000543F5 /* Info.plist */,
 			);
 			path = "Tim BurtonsTests";
@@ -754,7 +751,6 @@
 				BDA73DAA2047987B0089C78D /* URLConvertorTests.swift in Sources */,
 				BDA73DC32047C7690089C78D /* APIServiceTests.swift in Sources */,
 				BDF827542046F40A001DDBAC /* Error.swift in Sources */,
-				BD6DECA82044F129000543F5 /* Tim_BurtonsTests.swift in Sources */,
 				BDF8275F20474F06001DDBAC /* ReusableViewTests.swift in Sources */,
 				BD4AFAA22048D14200F796B1 /* ProductListServiceTests.swift in Sources */,
 				BDA73DAC20479A100089C78D /* ReqeustProductsTests.swift in Sources */,
